@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    /* Body */
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: white url("images/bats.gif") repeat;
+    color: #000;
+    }
+    /* Header */
+    header {
+    background: linear-gradient(to right, white, orange, black);
+    color: #000;
+    padding: 20px 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .header {
+    background: linear-gradient(to right, white, orange, black);
+    color: #000;
+    padding: 20px 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .header-content {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    }
+    header .logo {
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+    }
+    header h1 {
+    display: inline-block;
+    font-size: 2em;
+    margin: 0;
+    }
+    header h2 {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #222;
+    margin: 0;
+    }
+    /* Navigation Bar */
+    nav {
+    background-color: #000;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .main-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    }
+    .main-nav li {
+    position: relative;
+    }
+    .main-nav a {
+    display: block;
+    padding: 10px 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    }
+    .main-nav li.active a {
+    background-color: orange;
+    color: #000;
+    }
+    .main-nav li:hover > a {
+    background-color: gray;
+    }
+    .main-nav li a[href="index.html"],
+    .main-nav li a[href="products.html"] {
+    cursor: pointer;
+    }
+    .main-nav li a[href="#"] {
+    cursor: default;
+    }
+    .submenu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    }
+    .submenu li a {
+    color: white;
+    padding: 10px;
+    display: block;
+    }
+    .submenu li a:hover {
+    background-color: gray;
+    }
+    .dropdown:hover .submenu {
+    display: block;
+    }
+    /* Main Container */
+    .main-container {
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    }
+    /* Sidebar */
+    .sidebar {
+    width: 150px;
+    padding: 20px 0;
+    text-align: center;
+    background-color: transparent;
+    }
+    .sidebar ul {
+    list-style: none;
+    }
+    .sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 0;
+    font-weight: bold;
+    border: 2px solid #000;
+    margin: 8px;
+    background-color: #ffa500;
+    }
+    .sidebar a:hover {
+    color: green;
+    }
+    /* Main Content */
+    main {
+    flex: 1;
+    padding: 30px;
+    }
+    main h1 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    }
+    main h1 .large-w {
+    font-size: 1.8em;
+    font-weight: bold;
+    }
+    main h2 {
+    font-size: 1.3em;
+    color: #000;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    }
+    main a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+    }
+    main a:hover {
+    color: green;
+    }
+    main span {
+    color: #000;
+    font-weight: normal;
+    text-decoration: none;
+    }
+    main .product-week a {
+    text-decoration: underline;
+    }
+    main .product-week a:hover {
+    color: green;
+    }
+    /* Table Styling */
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    }
+    th,
+    td {
+    padding: 0;
+    text-align: left;
+    vertical-align: top;
+    border: none;
+    }
+    th {
+    background-color: #fff;
+    color: #000;
+    }
+    td:nth-child(3) {
+    background-color: #f5deb3;
+    }
+    .price {
+    background-color: transparent;
+    padding: 2px 5px;
+    }
+    tr:hover {
+    background-color: #f9f9f9;
+    }
+    /* Product Detail Page */
+    .product-detail-page {
+    flex: 1;
+    padding: 30px;
+    }
+    .product-layout {
+    display: flex;
+    gap: 20px;
+    }
+    .product-image-text {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    }
+    .Deranged-cat {
+    flex: 0 0 auto;
+    }
+    .Deranged-cat img {
+    display: block;
+    margin: 0;
+    }
+    .product-info {
+    margin-bottom: 0;
+    padding: 0;
+    }
+    .recommendations-box {
+    padding: 0 20px;
+    }
+    .recommendations-container {
+    background-color: #f5deb3;
+    padding: 5px;
+    }
+    .recommendations-container h3 {
+    font-size: 1.2em;
+    margin: 0 0 5px 0;
+    }
+    .recommendations-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 10px;
+    }
+    .recommendations-container li {
+    margin-bottom: 5px;
+    text-align: left;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    }
+    .recommendations-container img {
+    margin-bottom: 5px;
+    width: 50px;
+    }
+    .recommendations-container a {
+    color: #000;
+    text-decoration: underline;
+    font-weight: normal;
+    }
+    .recommendations-container a:hover {
+    color: green;
+    }
+    .product-right-section {
+    flex: 1;
+    }
+    /* Product Sidebar */
+    .product-sidebar {
+    width: 200px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    }
+    .product-sidebar h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    }
+    .product-sidebar ul {
+    list-style: none;
+    }
+    .product-sidebar li {
+    margin-bottom: 5px;
+    }
+    .product-sidebar a {
+    color: orange;
+    text-decoration: none;
+    }
+    .product-sidebar a:hover {
+    color: green;
+    }
+    /* Footer */
+    footer {
+    background: linear-gradient(to right, black, orange, white);
+    color: #000;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.6);
+    margin-top: 0;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    }

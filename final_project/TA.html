@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AUM CS – TA Application</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body class="bg-campus">
+<div class="page">
+  <header class="site-header">
+    <img src="images/logo.png" alt="AUM logo">
+    <h1>Computer Science Department</h1>
+  </header>
+
+  <nav class="site-nav">
+    <a href="home.html">Home</a>
+    <a href="description.html">Program Description</a>
+    <a class="active" href="TA.html">TA Application</a>
+    <a href="GPA.html">GPA Calculator</a>
+  </nav>
+
+  <main class="container">
+    <form id="taForm" class="ta-form" action="survey_data.html" method="get">
+      <h2>Teaching Assistant Application Form</h2>
+      <h3>Applicant information</h3>
+
+      <div class="ta-row">
+        <label for="first">First name:</label>
+        <input type="text" id="first" name="First name" required>
+      </div>
+
+      <div class="ta-row">
+        <label for="last">Last name:</label>
+        <input type="text" id="last" name="Last name" required>
+      </div>
+
+      <div class="ta-row">
+        <label for="sid">Student ID:</label>
+        <input type="text" id="sid" name="Student ID" required>
+      </div>
+
+      <div class="ta-row">
+        <label>Gender:</label>
+        <div>
+          M <input type="checkbox" id="gM" name="Gender" value="M">
+          <span style="margin-left:1rem;">
+            F <input type="checkbox" id="gF" name="Gender" value="F">
+          </span>
+        </div>
+      </div>
+
+      <div class="ta-row">
+        <label for="gpa">GPA:</label>
+        <input type="text" id="gpa" name="GPA" required>
+      </div>
+
+      <div class="ta-row ta-comments">
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="Comments"></textarea>
+      </div>
+
+      <h3>Thank you for completing the application!</h3>
+      <div class="ta-actions">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <div class="left">
+      7400 East Drive<br>Montgomery, AL 36117<br>
+      Local: 334-244-3000<br>Toll‑Free: 800-227-2649
+    </div>
+    <small>© 2025 vikram</small>
+    <div class="social">
+      <a href="#"><img src="images/twt.jpeg" alt="Twitter"></a>
+      <a href="#"><img src="images/pinterest-logo.png" alt="Pinterest"></a>
+      <a href="#"><img src="images/facebook-social-network-logo.png" alt="Facebook"></a>
+    </div>
+  </footer>
+</div>
+
+<script>
+// Make Gender required (at least one)
+document.getElementById('taForm').addEventListener('submit', function(e){
+  if(!document.getElementById('gM').checked && !document.getElementById('gF').checked){
+    e.preventDefault();
+    alert('Please select at least one Gender option.');
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AUM CS – GPA Calculator</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body class="bg-campus">
+<div class="page">
+  <header class="site-header">
+    <img src="images/logo.png" alt="AUM logo">
+    <h1>Computer Science Department</h1>
+  </header>
+
+  <nav class="site-nav">
+    <a href="home.html">Home</a>
+    <a href="description.html">Program Description</a>
+    <a href="TA.html">TA Application</a>
+    <a class="active" href="GPA.html">GPA Calculator</a>
+  </nav>
+
+  <main class="container">
+    <section class="gpa-wrap">
+      <h2>Find your GPA!</h2>
+      <p>Enter the number of credit hours for each course, and the letter grade for each of them. At least 2 courses should be entered.</p>
+
+      <div class="gpa-grid">
+        <div></div>
+        <div class="head">Credit Hours</div>
+        <div class="head">Grade</div>
+
+        <div>Course 1:</div> <input id="ch1" type="text" inputmode="numeric"> <input id="gr1" type="text" maxlength="2">
+        <div>Course 2:</div> <input id="ch2" type="text" inputmode="numeric"> <input id="gr2" type="text" maxlength="2">
+        <div>Course 3:</div> <input id="ch3" type="text" inputmode="numeric"> <input id="gr3" type="text" maxlength="2">
+        <div>Course 4:</div> <input id="ch4" type="text" inputmode="numeric"> <input id="gr4" type="text" maxlength="2">
+        <div>Course 5:</div> <input id="ch5" type="text" inputmode="numeric"> <input id="gr5" type="text" maxlength="2">
+
+        <div>Avg GPA:</div> <input id="avgGpa" type="text" readonly> <div></div>
+      </div>
+
+      <div class="gpa-actions">
+        <button type="button" onclick="calculateGPA()">submit</button>
+        <button type="button" onclick="resetGPA()">Reset</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="left">
+      7400 East Drive<br>Montgomery, AL 36117<br>
+      Local: 334-244-3000<br>Toll‑Free: 800-227-2649
+    </div>
+    <small>© 2025 vikram</small>
+    <div class="social">
+      <a href="#"><img src="images/twt.jpeg" alt="Twitter"></a>
+      <a href="#"><img src="images/pinterest-logo.png" alt="Pinterest"></a>
+      <a href="#"><img src="images/facebook-social-network-logo.png" alt="Facebook"></a>
+    </div>
+  </footer>
+</div>
+
+<script src="GPA.js"></script>
+</body>
+</html>

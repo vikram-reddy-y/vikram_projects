@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Survey Data</title>
+  <style>
+    body { width: 500px; margin: 0 auto; padding: 0 30px; border: 2px solid blue; }
+    dt { font-weight: bold; }
+  </style>
+  <script type="text/javascript">
+    function decodeValue(text) {
+      try { return decodeURIComponent((text || '').replace(/\+/g, ' ')); }
+      catch { return text || ''; }
+    }
+    function display_data() {
+      var query = window.location.search.slice(1);
+      if (!query) { document.write('<p>No data was submitted.</p>'); return; }
+      var fields = query.split('&');
+      document.write('<dl>');
+      for (var i = 0; i < fields.length; i++) {
+        var parts = fields[i].split('=');
+        var key = decodeValue(parts[0]);
+        var val = decodeValue(parts[1]);
+        document.write('<dt>' + key + '</dt>');
+        document.write('<dd>' + val + '</dd>');
+      }
+      document.write('</dl>');
+    }
+  </script>
+</head>
+<body>
+  <h1>Survey Data</h1>
+  <script>display_data();</script>
+</body>
+</html>
